@@ -187,25 +187,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_b6uyz3r',  
-        'template_f7ri90l', 
-        e.target,
-        'SCzgMvUl42T3sd1A8' 
-      )
+  
+    emailjs.sendForm('service_b6uyz3r', 'template_f7ri90l', e.target, 'SCzgMvUl42T3sd1A8')
       .then(
         (result) => {
+          console.log('Message sent successfully:', result.text);
           alert('Message sent successfully!');
-          setFormData({ name: '', email: '', message: '' }); 
         },
         (error) => {
-          console.error('Error:', error.text);
+          console.error('Error sending message:', error.text);
           alert('Failed to send the message. Please try again.');
         }
       );
   };
+  
 
   return (
     <section id="contact" className="py-20">

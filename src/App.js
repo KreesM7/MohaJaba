@@ -190,15 +190,15 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_b6uyz3r',  // Your Service ID
-        'template_f7ri90l', // Your Template ID
+        'service_b6uyz3r',  
+        'template_f7ri90l', 
         e.target,
-        '-Jc02NV3kC2gNocCR' // Your Public Key
+        'SCzgMvUl42T3sd1A8' 
       )
       .then(
         (result) => {
           alert('Message sent successfully!');
-          setFormData({ name: '', email: '', message: '' }); // Reset form fields
+          setFormData({ name: '', email: '', message: '' }); 
         },
         (error) => {
           console.error('Error:', error.text);

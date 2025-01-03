@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Mail, Github, Linkedin, ExternalLink, ChevronDown, Menu, X } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import emailjs from '@emailjs/browser';
 
 // Progress data for the skills chart
 const skillsData = [
@@ -186,8 +187,24 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs
+      .sendForm(
+        'service_b6uyz3r',  // Your Service ID
+        'template_f7ri90l', // Your Template ID
+        e.target,
+        '-Jc02NV3kC2gNocCR' // Your Public Key
+      )
+      .then(
+        (result) => {
+          alert('Message sent successfully!');
+          setFormData({ name: '', email: '', message: '' }); // Reset form fields
+        },
+        (error) => {
+          console.error('Error:', error.text);
+          alert('Failed to send the message. Please try again.');
+        }
+      );
   };
 
   return (
@@ -203,6 +220,7 @@ const Contact = () => {
                 className="w-full px-4 py-2 rounded-lg border dark:bg-gray-700 dark:border-gray-600"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                name="user_name"
                 required
               />
             </div>
@@ -213,6 +231,7 @@ const Contact = () => {
                 className="w-full px-4 py-2 rounded-lg border dark:bg-gray-700 dark:border-gray-600"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                name="user_email"
                 required
               />
             </div>
@@ -223,6 +242,7 @@ const Contact = () => {
                 rows="4"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                name="message"
                 required
               />
             </div>
@@ -238,6 +258,7 @@ const Contact = () => {
     </section>
   );
 };
+
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);

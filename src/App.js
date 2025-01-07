@@ -86,7 +86,7 @@ const About = () => (
       <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
         <p className="text-lg leading-relaxed mb-6">
-          I am a motivated high school student at Queen Elizabeth School Edmonton, passionate about technology and innovation. Expected to graduate in June 2025, I am actively seeking opportunities to expand my knowledge and skills in the tech industry.
+          I am a motivated high school student at Queen Elizabeth School Edmonton, passionate about technology and innovation. Expected to graduate in June 2026, I am actively seeking opportunities to expand my knowledge and skills in the tech industry.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">

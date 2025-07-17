@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MohamadWebsite/static/css/main.ad2365f2.css",
-    "main.js": "/MohamadWebsite/static/js/main.234bafe4.js",
-    "static/js/563.8b2b5719.chunk.js": "/MohamadWebsite/static/js/563.8b2b5719.chunk.js",
+    "main.css": "/MohamadWebsite/static/css/main.04f906de.css",
+    "main.js": "/MohamadWebsite/static/js/main.ac57e7c7.js",
+    "static/js/488.51e9737d.chunk.js": "/MohamadWebsite/static/js/488.51e9737d.chunk.js",
     "index.html": "/MohamadWebsite/index.html",
-    "main.ad2365f2.css.map": "/MohamadWebsite/static/css/main.ad2365f2.css.map",
-    "main.234bafe4.js.map": "/MohamadWebsite/static/js/main.234bafe4.js.map",
-    "563.8b2b5719.chunk.js.map": "/MohamadWebsite/static/js/563.8b2b5719.chunk.js.map"
+    "main.04f906de.css.map": "/MohamadWebsite/static/css/main.04f906de.css.map",
+    "main.ac57e7c7.js.map": "/MohamadWebsite/static/js/main.ac57e7c7.js.map",
+    "488.51e9737d.chunk.js.map": "/MohamadWebsite/static/js/488.51e9737d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad2365f2.css",
-    "static/js/main.234bafe4.js"
+    "static/css/main.04f906de.css",
+    "static/js/main.ac57e7c7.js"
   ]
 }
